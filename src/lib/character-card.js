@@ -1,11 +1,11 @@
-// const url = "https://rickandmortyapi.com/"
+// const url = 'https://rickandmortyapi.com/'
 
-// const getCharacter = fetch(url)
+// export const getCharacter = fetch(url)
 //   .then((response) => {
 //     if (response.ok) {
-//       return response.json();
+//       return response.json()
 //     } else {
-//       throw new Error(response.status);
+//       throw new Error(response.status)
 //     }
 //   })
 //   .then((dataObject) => {

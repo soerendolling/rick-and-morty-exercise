@@ -43,3 +43,21 @@ html {
   display: flex;
   flex-direction: column;
 }
+
+.header-filter__button,
+.header-load__button {
+}
+
+.header-filter__search {
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-character-card {
+  border-radius: 8px;
+  background-color: var(--card-color);
+}
