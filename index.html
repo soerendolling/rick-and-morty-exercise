@@ -5,12 +5,37 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles/index.css" />
-    <title>Vite App</title>
+    <title>My Rick and Morty App</title>
   </head>
-  <body>
-    <header>
-      <h1>Hello World</h1>
+  <body class="body-grid">
+    <header class="body-header">
+      <img
+        src="./src/img/logo.png"
+        alt="A logo of rick and morty"
+        class="header-logo"
+      />
+      <form class="header-filter__flex">
+        <button class="header-filter__button">Filter</button>
+        <textarea class="header-filter__search"></textarea>
+      </form>
+      <button class="header-load__button">Load Data</button>
     </header>
+    <main class="body-main">
+      <div class="main-content">
+        <div class="main-character-card">
+          <div class="character-card__image"></div>
+          <div class="character-card__name"></div>
+          <div class="character-card__status"></div>
+          <div class="character-card__species"></div>
+          <div class="character-card__typ"></div>
+          <div class="character-card__gender"></div>
+          <div class="character-card__location"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="body-footer">
+      <h1 class="footer-text">The App is made with love</h1>
+    </footer>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

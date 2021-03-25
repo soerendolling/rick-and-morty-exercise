@@ -1,0 +1,45 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.body-grid {
+  display: grid;
+  grid-template-rows: [header] 80px [main] 510px [footer] 60px;
+  grid-template-columns: auto;
+}
+
+.body-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  grid-row: header;
+  background-color: var(--header-color);
+}
+
+.body-main {
+  grid-row: main;
+  background-color: var(--main-background-color);
+}
+
+.body-footer {
+  grid-row: footer;
+  background-color: var(--header-color);
+}
+
+.header-logo {
+  width: auto;
+  height: 60px;
+}
+
+.header-filter__flex {
+  display: flex;
+  flex-direction: column;
+}
