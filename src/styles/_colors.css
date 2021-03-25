@@ -1,3 +1,7 @@
 :root {
-  /* Define your variable colors here */
+  --main-background-color: #f2f2f2;
+  --highlight-color-1: #49b3bf;
+  --highlight-color-2: #f2dc6b;
+  --card-color: #d9ba82;
+  --header-color: #8c5626;
 }
