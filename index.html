@@ -15,6 +15,12 @@
         class="header-logo"
       />
       <form class="header-filter__flex">
+        <select class="header-filter__dropdown" name="filter" id="filter">
+          <option value="all" selected>All</option>
+          <option value="alive">Alive</option>
+          <option value="dead">Dead</option>
+          <option value="unknown">Unknown</option>
+        </select>
         <button class="header-filter__button">Filter</button>
         <textarea class="header-filter__search"></textarea>
       </form>
@@ -27,6 +33,6 @@
       <p class="footer-text">The App is made with love</p>
     </footer>
     <!-- <div id="app"></div> -->
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/lib/character.js"></script>
   </body>
 </html>

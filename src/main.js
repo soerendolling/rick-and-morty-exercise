@@ -1,65 +1,37 @@
+/* eslint-disable space-before-blocks */
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable padded-blocks */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable indent */
 /* eslint-disable semi */
 /* eslint-disable quotes */
-const url = "https://rickandmortyapi.com/api/character";
 
-export const getCharacter = fetch(url)
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
+// import { getCharacter } from "./lib/character.js";
+
+const baseUrl = "https://rickandmortyapi.com/api/character";
+
+const filterButton = document.querySelector(".header-filter__button");
+const filterMenu = document.querySelector(".header-filter__dropdown");
+
+export function filterCharacter(status) {
+  filterButton.addEventListener("click", () => {
+    const characterStatus = filterMenu.value;
+    //   console.log(characterStatus);
+
+    if (characterStatus === `all`) {
+      url = `${url}`;
+      console.log(url);
+    } else if (characterStatus === `alive`) {
+      url = `${url}?status=alive`;
+      console.log(url);
+    } else if (characterStatus === `dead`) {
+      url = `${url}?status=dead`;
+      console.log(url);
     } else {
-      throw new Error(response.status);
+      url = `${url}?status=unknown`;
+      console.log(url);
     }
-  })
-  .then((dataObject) => {
-    dataObject.results.forEach((character) => {
-      const content = document.querySelector(".main-content");
-      const article = document.createElement("article");
-      article.classList.add("main-character-card");
-      content.append(article);
-
-      const img = document.createElement("img");
-      img.classList.add("character-card__image");
-      img.src = `${character.image}`;
-      img.alt = `${character.name}`;
-      article.append(img);
-
-      const name = document.createElement("div");
-      name.classList.add("character-card__name");
-      name.textContent = `Name:${character.name}`;
-      article.append(name);
-
-      const status = document.createElement("div");
-      status.classList.add("character-card__status");
-      status.textContent = `Status:${character.status}`;
-      article.append(status);
-
-      if (character.status === "Alive") {
-        article.style.backgroundColor = `var(--card-background-alive)`;
-        article.style.color = `var(--card-text-alive)`;
-      } else if (character.status === "Dead") {
-        article.style.backgroundColor = `var(--card-background-dead)`;
-        article.style.color = `var(--card-text-dead)`;
-      } else {
-        article.style.backgroundColor = `var(--card-background-unknown)`;
-        article.style.color = `var(--card-text-unknown)`;
-      }
-
-      const species = document.createElement("div");
-      species.classList.add("character-card__species");
-      species.textContent = `Species:${character.species}`;
-      article.append(species);
-
-      const gender = document.createElement("div");
-      gender.classList.add("character-card__gender");
-      gender.textContent = `Gender:${character.gender}`;
-      article.append(gender);
-
-      const location = document.createElement("div");
-      location.classList.add("character-card__location");
-      location.textContent = `Location:${character.location.name}`;
-      article.append(location);
-    });
-  })
-  .catch((error) => {
-    console.log(error);
+    return fetch(url).then((res) => res.json());
   });
+}
+console.log(url);
