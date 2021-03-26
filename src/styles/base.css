@@ -34,7 +34,11 @@ html {
 .body-footer {
   grid-row: footer;
   grid-column: 1 / 4;
-  background-color: var(--header-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--footer-color);
+  font-size: 20px;
 }
 
 .header-logo {
@@ -45,13 +49,19 @@ html {
 .header-filter__flex {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  margin-top: 5px;
 }
 
 .header-filter__button,
 .header-load__button {
+  border-radius: 8px;
+  background-color: var(--button-color);
 }
 
 .header-filter__search {
+  height: 20px;
+  width: 80px;
 }
 
 .main-content {
@@ -69,12 +79,5 @@ html {
   width: 140px;
   padding: 10px;
   border: solid 2px black;
-  background-color: var(--card-color);
-}
-
-.body-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
+  background-color: var(--character-card-color);
 }
