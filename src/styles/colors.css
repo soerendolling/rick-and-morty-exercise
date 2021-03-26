@@ -2,7 +2,12 @@
   --main-background-color: #f2f2f2;
   --header-color: #d9ba82;
   --footer-color: #d9ba82;
-  --character-card-color: #f2dc6b;
+  --card-background-unknown: #f2dc6b;
+  --card-text-unknown: black;
+  --card-background-alive: lightgreen;
+  --card-text-alive: black;
+  --card-background-dead: black;
+  --card-text-dead: white;
   --button-color: #49b3bf;
   --highlight-color-2: #f2dc6b;
 }

@@ -33,6 +33,17 @@ export const getCharacter = fetch(url)
       status.textContent = `Status:${character.status}`;
       article.append(status);
 
+      if (character.status === "Alive") {
+        article.style.backgroundColor = `var(--card-background-alive)`;
+        article.style.color = `var(--card-text-alive)`;
+      } else if (character.status === "Dead") {
+        article.style.backgroundColor = `var(--card-background-dead)`;
+        article.style.color = `var(--card-text-dead)`;
+      } else {
+        article.style.backgroundColor = `var(--card-background-unknown)`;
+        article.style.color = `var(--card-text-unknown)`;
+      }
+
       const species = document.createElement("div");
       species.classList.add("character-card__species");
       species.textContent = `Species:${character.species}`;
