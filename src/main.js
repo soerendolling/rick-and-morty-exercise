@@ -12,7 +12,7 @@ export const getCharacter = fetch(url)
   })
   .then((dataObject) => {
     dataObject.results.forEach((character) => {
-      const content = document.querySelector("main-content");
+      const content = document.querySelector(".main-content");
       const article = document.createElement("article");
       article.classList.add("main-character-card");
       content.append(article);
