@@ -1,12 +1,10 @@
 /* eslint-disable quotes */
 /* eslint-disable semi */
 
-const url = "https://rickandmortyapi.com/api/character";
-
 export function getCharacter() {
   const filterMenu = document.querySelector(".header-filter__dropdown");
   const characterStatus = filterMenu.value;
-  let url = createUrl(characterStatus);
+  const url = createUrl(characterStatus);
 
   console.log(url);
 
