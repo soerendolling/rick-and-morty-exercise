@@ -21,10 +21,14 @@
           <option value="dead">Dead</option>
           <option value="unknown">Unknown</option>
         </select>
-        <button class="header-filter__button">Filter</button>
-        <textarea class="header-filter__search"></textarea>
+        <input
+          type="search"
+          class="header-filter__search"
+          placeholder="Search for a name"
+          id="search-input"
+        />
       </form>
-      <button class="header-load__button">Load Data</button>
+      <button class="header-load__button" type="submit">Load Data</button>
     </header>
     <main class="body-main">
       <div class="main-content"></div>
@@ -33,6 +37,6 @@
       <p class="footer-text">The App is made with love</p>
     </footer>
     <!-- <div id="app"></div> -->
-    <script type="module" src="/src/lib/character.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -6,32 +6,20 @@
 /* eslint-disable semi */
 /* eslint-disable quotes */
 
-// import { getCharacter } from "./lib/character.js";
+import { getCharacter } from "./lib/character.js";
+import { clearCharacters } from "./lib/character.js";
 
-const baseUrl = "https://rickandmortyapi.com/api/character";
+const loadButton = document.querySelector(".header-load__button");
 
-const filterButton = document.querySelector(".header-filter__button");
-const filterMenu = document.querySelector(".header-filter__dropdown");
+loadButton.addEventListener("click", () => {
+  clearCharacters();
+  getCharacter();
+});
 
-export function filterCharacter(status) {
-  filterButton.addEventListener("click", () => {
-    const characterStatus = filterMenu.value;
-    //   console.log(characterStatus);
+const form = document.querySelector("form");
 
-    if (characterStatus === `all`) {
-      url = `${url}`;
-      console.log(url);
-    } else if (characterStatus === `alive`) {
-      url = `${url}?status=alive`;
-      console.log(url);
-    } else if (characterStatus === `dead`) {
-      url = `${url}?status=dead`;
-      console.log(url);
-    } else {
-      url = `${url}?status=unknown`;
-      console.log(url);
-    }
-    return fetch(url).then((res) => res.json());
-  });
-}
-console.log(url);
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  clearCharacters();
+  getCharacter();
+});
