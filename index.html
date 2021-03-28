@@ -16,10 +16,14 @@
       />
       <form class="header-filter__flex">
         <select class="header-filter__dropdown" name="filter" id="filter">
-          <option value="all" selected>All</option>
-          <option value="alive">Alive</option>
-          <option value="dead">Dead</option>
-          <option value="unknown">Unknown</option>
+          <option class="header-dropdown__content" value="all" selected>
+            All
+          </option>
+          <option class="header-dropdown__content" value="alive">Alive</option>
+          <option class="header-dropdown__content" value="dead">Dead</option>
+          <option class="header-dropdown__content" value="unknown">
+            Unknown
+          </option>
         </select>
         <input
           type="search"
@@ -36,7 +40,7 @@
     <footer class="body-footer">
       <p class="footer-text">The App is made with love</p>
     </footer>
-    <!-- <div id="app"></div> -->
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

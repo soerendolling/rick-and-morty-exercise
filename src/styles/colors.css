@@ -6,7 +6,7 @@
   --card-text-unknown: black;
   --card-background-alive: lightgreen;
   --card-text-alive: black;
-  --card-background-dead: black;
+  --card-background-dead: red;
   --card-text-dead: white;
   --button-color: #49b3bf;
   --highlight-color-2: #f2dc6b;

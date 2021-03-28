@@ -11,23 +11,25 @@ html {
 
 .body-grid {
   display: grid;
-  grid-template-rows: [header] 80px [main] 510px [footer] 60px;
+  grid-template-rows: [header] 80px [main] auto [footer] 60px;
   grid-template-columns: [left-gutter] 10px [content] auto [right-gutter] 10px;
 }
 
 .body-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  gap: 15px;
   grid-row: header;
-  grid-column: 1/ 4;
+  grid-column: 1 / 4;
   background-color: var(--header-color);
 }
 
 .body-main {
   grid-row: main;
   grid-column: 1 / 4;
+
   background-color: var(--main-background-color);
 }
 
@@ -59,9 +61,17 @@ html {
   background-color: var(--button-color);
 }
 
+.header-filter__dropdown {
+  border-radius: 8px;
+  background-color: var(--main-background-color);
+}
+
 .header-filter__search {
+  border-radius: 8px;
   height: 20px;
-  width: 80px;
+  width: 100px;
+  background-color: var(--button-color);
+  color: var(--main-background-color);
 }
 
 .main-content {
@@ -71,8 +81,8 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  height: 100vh;
-  margin: 20px 10px;
+  height: 76vh;
+  padding: 10px 0;
   overflow-y: scroll;
 }
 
@@ -83,56 +93,15 @@ html {
   height: auto;
   width: 160px;
   padding: 10px;
+  border-radius: 8px;
   border: solid 2px black;
   background-color: var(--character-card-color);
+  word-wrap: break-word;
 }
 
 .character-card__image {
   border-radius: 50%;
   height: auto;
   width: 70px;
-}
-
-.dropbtn {
-  background-color: #3498db;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #2980b9;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {
-  background-color: #ddd;
-}
-
-.show {
-  display: block;
+  margin: 15px auto;
 }
