@@ -1,4 +1,5 @@
-import { getCharacter, clearCharacters } from "./lib/character.js";
+import { getCharacter } from "./lib/character.js";
+import { clearCharacters } from "./lib/build.js";
 
 const loadButton = document.querySelector(".header-load__button");
 
