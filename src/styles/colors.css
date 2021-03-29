@@ -1,0 +1,19 @@
+:root {
+  --main-background-color: #f2f2f2;
+  --header-color: #d9ba82;
+  --footer-color: #d9ba82;
+  --card-background-unknown: #f2dc6b;
+  --card-text-unknown: black;
+  --card-background-alive: lightgreen;
+  --card-text-alive: black;
+  --card-background-dead: red;
+  --card-text-dead: white;
+  --button-color: #49b3bf;
+  --highlight-color-2: #f2dc6b;
+}
+
+/* The Grey #f2f2f2;
+The dark brown #8c5626;
+The light brown #d9ba82;
+The blue #49b3bf;
+The yellow #f2dc6b; */
